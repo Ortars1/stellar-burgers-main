@@ -1,14 +1,13 @@
-import { ConstructorPage } from '@pages';
-import '../../index.css';
+import { Content } from '../content';
+import { Header } from '../header';
+
 import styles from './app.module.css';
 
-import { AppHeader } from '@components';
-
-const App = () => (
-  <div className={styles.app}>
-    <AppHeader />
-    <ConstructorPage />
-  </div>
-);
-
-export default App;
+export function App() {
+  return (
+    <div>
+      <Header />
+      <Content className={styles.content} />
+    </div>
+  );
+}
